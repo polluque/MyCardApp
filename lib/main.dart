@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.indigo,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children:const [ //conts me indica que esta columna se mantendra constante 
+          children: [ //conts me indica que esta columna se mantendra constante 
             CircleAvatar(
                 radius: 60.0, //valor numerico,siempre decimal
                 backgroundColor: Colors.white,
@@ -24,10 +24,14 @@ class MyApp extends StatelessWidget {
                   "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
                 ), 
             ),
+            SizedBox(
+                  height: 10.0,
+                ),
             Text('paul fabian luque berna', style:TextStyle(
               color: Colors.white, //coma despues de cada propiedad 
               fontSize: 25.0,
-              fontWeight: FontWeight.w800, 
+              fontWeight: FontWeight.w500,
+              fontFamily: "Dancing", 
             ),
             ),
             Text(
@@ -39,6 +43,61 @@ class MyApp extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
+///////////////divider widget 
+              Divider(
+                thickness: 0.70,
+                color: Colors.white,
+                indent: 120.0,
+                endIndent: 120.0,
+              ),
+              SizedBox(
+                  height: 10.0,
+                ),
+
+            // widget box 
+            Card(
+              elevation: 20.0,
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 8.0),
+              child: ListTile(
+                 title: Text("935 931 845"),
+                 subtitle: Text("movil"),
+                 leading: Icon(
+                  Icons.phone,
+                  color: Colors.indigo,
+                  ), // elemento que va a la izquierda del listtile
+                 trailing: Icon(Icons.check_circle_outline),  
+              ),
+            ),
+
+            ///////// segundo box  
+            Card(
+              elevation: 20.0,
+              color: Colors.white,
+              margin: EdgeInsets.all(15.0),
+              child: ListTile(
+                 title: Text("935 931 845"),
+                 subtitle: Text("email"),
+                 leading: Icon(
+                  Icons.mail,
+                  color: Colors.indigo,
+                  ), // elemento que va a la izquierda del listtile
+                 trailing: Icon(Icons.check_circle_outline),  
+              ),
+            ),
+            ///////////
+            ///
+            Row(
+              children: [
+                Icon(Icons.alarm),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Icon(Icons.alarm),
+                Icon(Icons.alarm),
+              ],
+            ),
+            
           ],
         ),
       ),
